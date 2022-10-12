@@ -14,9 +14,9 @@ class Results extends Component {
 
     render() {
         return (
-            <div>
+            <div className="results">
                 <Logo size={55} />
-                <SearchBar onSubmit={(query) => this.handleSearBarSubmit(query)} />
+                <SearchBar page="results" onSubmit={(query) => this.handleSearBarSubmit(query)} />
                 <ResultsPosts />
             </div>
         );

@@ -9,16 +9,16 @@ import * as actions from '../actions'
 class Home extends Component {
 
   handleSearBarSubmit(query) {
-    this.props.fetchPostsWithQuery(query);
-
-    this.props.history.push('/results');
+    this.props.fetchPostsWithQuery(query, () => {
+      this.props.history.push('/results');
+  });
   }
 
   render() {
     return (
-      <div>
+      <div className="home">
         <Logo />
-        <SearchBar onSubmit={(query) => this.handleSearBarSubmit(query)} />
+        <SearchBar page="home" onSubmit={(query) => this.handleSearBarSubmit(query)} />
         <RecentPost />
       </div>
     );

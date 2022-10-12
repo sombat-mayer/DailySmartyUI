@@ -14,7 +14,7 @@ class RecentPosts extends Component {
 
             if (index < 3) {
                 return (
-                    <Post {...post} key={index} />
+                    <Post type="recent" {...post} key={index} />
 
                     // <Post title={post.title} content={post.content} associated_topics={post.associated_topics} key={index} />
                     // above line of code is the same as *<Post {...post} key={index}* which is spred operator and cleaner,
