@@ -6,7 +6,6 @@ class Post extends Component {
         let topics = this.props.associated_topics.map((topic, index) => {
             return <span className="post-topic" key={index}> {topic} </span>
         })
-
         return topics;
     }
 
@@ -14,14 +13,15 @@ class Post extends Component {
         let links = this.props.post_link.map((post_link, index) => {
             return (
                 <div className="post-link" key={index}>
-                    <div className="post-link-box">
+                    <div className="post-link-box"> </div>
+
                         <div className="post-link-link">
                             <a href={post_link.link.url}>Useful Link #{index +1}</a>
                         </div>
-                    </div>
                 </div>
             )
         })
+        return links;
     }
 
     render() {
@@ -58,3 +58,4 @@ class Post extends Component {
 }
 
 export default Post;
+

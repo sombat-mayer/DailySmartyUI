@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './logo';
 import SearchBar from './searchBar';
-import RecentPost from './recentPost';
+import RecentPosts from './recentPosts';
 
 import { connect } from 'react-redux';
 import * as actions from '../actions'
@@ -11,15 +11,17 @@ class Home extends Component {
   handleSearBarSubmit(query) {
     this.props.fetchPostsWithQuery(query, () => {
       this.props.history.push('/results');
-  });
+    });
   }
 
   render() {
     return (
-      <div className="home">
-        <Logo />
-        <SearchBar page="home" onSubmit={(query) => this.handleSearBarSubmit(query)} />
-        <RecentPost />
+      <div>
+        <div>
+          <Logo />
+          <SearchBar onSubmit={(query) => this.handleSearBarSubmit(query)} />
+          <RecentPosts />
+        </div>
       </div>
     );
   }

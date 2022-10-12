@@ -22,7 +22,7 @@ class ResultsPosts extends Component {
                     </ul>
                 </div>
             </div>
-        );
+        )
     }
 }
 
@@ -33,4 +33,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(ResultsPosts);
-
