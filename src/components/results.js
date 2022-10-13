@@ -8,18 +8,18 @@ import* as actions from '../actions';
 
 class Results extends Component {
 
-    handleSearBarSubmit(query) {
+    handleSearchBarSubmit(query) {
         this.props.fetchPostsWithQuery(query);
     }
 
     render() {
         return (
             <div>
-                <Logo size={55} />
-                <SearchBar onSubmit={(query) => this.handleSearBarSubmit(query)} />
-                <ResultsPosts />
+                <Logo size={55}/>
+                <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)}/>
+                <ResultsPosts/>
             </div>
-        );
+        )
     }
 }
 

@@ -18,9 +18,9 @@ class Home extends Component {
     return (
       <div>
         <div>
-          <Logo />
+          <Logo/>
           <SearchBar onSubmit={(query) => this.handleSearBarSubmit(query)} />
-          <RecentPosts />
+          <RecentPosts/>
         </div>
       </div>
     );
